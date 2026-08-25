@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekenslim.nl Nieuwsbrief</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .email-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ====== HEADER ====== */
+        .email-header {
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 32px;
+            color: #0066cc;
+            margin-bottom: 15px;
+        }
+
+        .email-header h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .email-header p {
+            font-size: 14px;
+            opacity: 0.95;
+        }
+
+        /* ====== CONTENT SECTIONS ====== */
+        .section {
+            padding: 30px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 24px;
+            color: #0066cc;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: #0066cc;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .section-text {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .highlight-box {
+            background: #f0f7ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ff6b35;
+            margin: 15px 0;
+        }
+
+        .highlight-box p {
+            font-size: 14px;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .feature-list li {
+            font-size: 14px;
+            color: #555;
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ff6b35;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b35 0%, #e85a2c 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            margin: 15px 0;
+            transition: opacity 0.3s;
+        }
+
+        .cta-button:hover {
+            opacity: 0.9;
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            margin: 20px 0;
+        }
+
+        /* ====== FOOTER ====== */
+        .email-footer {
+            background: #f8f9fa;
+            padding: 25px 20px;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+
+        .footer-text {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #0066cc;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .unsubscribe {
+            font-size: 11px;
+            color: #bbb;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .unsubscribe a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        /* ====== RESPONSIVE ====== */
+        @media (max-width: 600px) {
+            .email-wrapper {
+                margin: 0;
+            }
+
+            .section {
+                padding: 20px 15px;
+            }
+
+            .section-title {
+                font-size: 20px;
+            }
+
+            .section-text {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-wrapper">
+        <!-- ====== HEADER ====== -->
+        <div class="email-header">
+            <div class="logo">R+</div>
+            <h1>Rekenslim.nl</h1>
+            <p>Slim omgaan met rekenproblemen</p>
+        </div>
+
+        <!-- ====== WELKOM SECTION ====== -->
+        <div class="section">
+            <p class="section-text">Beste lezer,</p>
+            <p class="section-text">Welkom bij de nieuwsbrief van Rekenslim.nl! In deze brief delen wij het laatste nieuws, handige tips en inspirerende verhalen over rekenondersteuning.</p>
+        </div>
+
+        <!-- ====== FEATURED SECTION ====== -->
+        <div class="section">
+            <h2 class="section-title">📢 Dit keer in onze nieuwsbrief</h2>
+            <div class="highlight-box">
+                <p><strong>Persoonlijke begeleiding die echt werkt</strong></p>
+                <p>Met Rekenslim.nl krijgt elk kind de ondersteuning die hij of zij nodig heeft. Lees hoe onze aanpak verschil maakt in het leven van leerlingen.</p>
+            </div>
+        </div>
+
+        <!-- ====== SERVICES SECTION ====== -->
+        <div class="section">
+            <h2 class="section-title">Onze Services</h2>
+            <p class="section-text">We bieden verschillende vormen van ondersteuning:</p>
+            <ul class="feature-list">
+                <li>Individuele begeleiding voor leerlingen met rekenproblemen</li>
+                <li>Diagnostiek en deskundig advies voor scholen</li>
+                <li>Trainingen en scholing voor leerkrachten</li>
+                <li>Ouderondersteuning en betrokkenheid</li>
+                <li>Preventie en vroegtijdige signalering programma's</li>
+            </ul>
+        </div>
+
+        <!-- ====== BENEFITS SECTION ====== -->
+        <div class="section">
+            <h2 class="section-title">Waarom Rekenslim.nl?</h2>
+            <p class="section-text">Wij begrijpen dat elk kind anders leert. Daarom bieden we:</p>
+            <ul class="feature-list">
+                <li>Expertise: Specialisten met jarenlange ervaring</li>
+                <li>Persoonlijke aanpak: Begeleiding op maat voor elk kind</li>
+                <li>Flexibiliteit: Op school, thuis of online</li>
+                <li>Resultaten: Meetbare verbetering van rekenvaardigheden</li>
+            </ul>
+        </div>
+
+        <!-- ====== CTA SECTION ====== -->
+        <div class="section">
+            <h2 class="section-title">Klaar om te beginnen?</h2>
+            <p class="section-text">Wil jij of jouw school meer informatie over onze diensten? Neem gerust contact met ons op!</p>
+            <div style="text-align: center;">
+                <a href="mailto:info@rekenslim.nl" class="cta-button">Stuur ons een e-mail</a>
+            </div>
+        </div>
+
+        <!-- ====== CONTACT SECTION ====== -->
+        <div class="section">
+            <h2 class="section-title">Contactgegevens</h2>
+            <p class="section-text">
+                <strong>Rekenslim.nl</strong><br>
+                📧 info@rekenslim.nl<br>
+                📞 +31 (0) 12447030<br>
+                🌐 www.rekenslim.nl
+            </p>
+        </div>
+
+        <!-- ====== DIVIDER ====== -->
+        <div style="height: 1px; background: #eee; margin: 0;"></div>
+
+        <!-- ====== FOOTER ====== -->
+        <div class="email-footer">
+            <p class="footer-text">
+                Rekenslim.nl helpt leerlingen, scholen en gezinnen met rekenondersteuning en ondersteuning bij dyscalculie.
+            </p>
+            <div class="footer-links">
+                <a href="https://www.rekenslim.nl">Website</a>
+                <a href="mailto:info@rekenslim.nl">Contact</a>
+            </div>
+            <div class="unsubscribe">
+                <p>&copy; 2024 Rekenslim.nl - Alle rechten voorbehouden.</p>
+                <p style="margin-top: 10px;">
+                    <a href="#">Uitschrijven voor toekomstige nieuwsbrieven</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
